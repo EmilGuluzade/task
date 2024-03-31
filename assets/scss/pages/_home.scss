@@ -1,0 +1,349 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+@import "../utils/extend";
+
+.hero {
+  background: url("https://preview.colorlib.com/theme/fashi/img/hero-2.jpg")
+    no-repeat center/cover;
+  padding: 200px 0;
+  &__content {
+    max-width: 41.666667%;
+  }
+  span {
+    color: $primary-color;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 28px;
+    display: inline-block;
+  }
+  h1 {
+    color: $text-dark;
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-family: $title-fontSize;
+  }
+  p {
+    font-size: 16px;
+    font-family: "Muli", sans-serif;
+    color: $grey-color;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 15px 0;
+  }
+}
+.gender {
+  padding: 80px 0;
+
+  .row {
+    gap: 30px;
+    justify-content: center;
+  }
+
+  &__card {
+    width: 33.3333%;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    h4 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: #252525;
+      font-weight: 700;
+      padding: 11px 28px;
+      background: #ffffff;
+      border-radius: 2px;
+    }
+  }
+}
+.sort {
+  padding: 100px 50px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  &__left {
+    width: 20%;
+    background-image: url("https://preview.colorlib.com/theme/fashi/img/products/women-large.jpg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+    height: 500px;
+    gap: 30px;
+    h2 {
+      color: white;
+      font-size: 35px;
+    }
+    a {
+      font-size: 20px;
+      border-bottom: 1px solid white;
+      color: white;
+      padding-bottom: 5px;
+    }
+  }
+  &__right {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    &-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      a {
+        border-bottom: 1px solid black;
+        padding-bottom: 5px;
+        color: black;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      p {
+        color: gray;
+        font-weight: bold;
+        font-size: 25px;
+      }
+    }
+    &-bottom {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+    }
+    &-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      span {
+        color: $primary-color;
+        font-weight: bold;
+      }
+      p {
+        font-size: 20px;
+        font-weight: lighter;
+      }
+      h4 {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 25px;
+      }
+    }
+  }
+}
+.deal {
+  .container {
+    padding: 100px 30px;
+    background-image: url(https://preview.colorlib.com/theme/fashi/img/time-bg.jpg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__left {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin-left: 30px;
+    margin-left: -100px;
+    h2 {
+      font-weight: bold;
+      font-size: 48px;
+    }
+    p {
+      width: 50%;
+      color: gray;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 30px;
+      }
+    }
+    button {
+      padding: 10px;
+      background: $primary-color;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+  &__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    &-card {
+      background: white;
+      padding: 10px;
+      span {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 30px;
+      }
+    }
+  }
+}
+.blog {
+  padding: 80px 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h3 {
+    position: relative;
+    color: #252525;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 38px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -14px;
+      width: 80px;
+      height: 3px;
+      background: #e7ab3c;
+      content: "";
+      margin: 0 auto;
+    }
+  }
+  .cards-area {
+    @extend .myFlex-center;
+    gap: 20px;
+    .card {
+      width: 350px;
+      &__img {
+        width: 350px;
+        img {
+          width: 100%;
+        }
+      }
+      &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &__items {
+          @extend .myFlexjc-start;
+          gap: 10px;
+          .date {
+            i {
+              color: $primary-color;
+            }
+          }
+          .comments {
+            i {
+              color: $primary-color;
+            }
+            span {
+              color: $dark-grey;
+            }
+          }
+        }
+        &__titles {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          h2 {
+            font-size: 24px;
+            @extend .myFont;
+          }
+          p {
+            @extend .myFontTitle;
+            color: $grey-color;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+.offer {
+  padding: 0 0 80px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  &__card {
+    border: 1px solid #f3f4f0;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-left: 55px;
+    padding-right: 55px;
+    width: 33.33333%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+
+    h6 {
+      color: #252525;
+      line-height: 20px;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    &__card-info {
+      margin-bottom: 0;
+      color: #252525;
+      line-height: 20px;
+    }
+  }
+}
+.picture {
+  display: flex;
+  justify-content: center;
+
+  .insta-overlay {
+    width: 16.666%;
+    position: relative;
+    &:hover .insta-overlay__text{
+      display: flex;
+    }
+    .insta-overlay__text {
+      width: 100%;
+      transition: 1s;
+      height: 100%;
+      background-color: #0000007d;
+      position: absolute;
+      color: #ffffff;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+    }
+    img {height: 100%;
+      width: 100%;
+    }
+  }
+}
