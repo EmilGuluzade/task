@@ -1,0 +1,49 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.navbar {
+  background-color: $text-dark;
+
+  &__top {
+    ul {
+      :hover {
+        background-color: $primary-color;
+      }
+      .grey {
+        display: flex;
+        gap: 30px;
+        background-color: $dark-grey;
+      }
+      display: flex;
+      color: white;
+      .active {
+        background-color: $primary-color;
+      }
+
+      li {
+        border-right: 2px solid #3b3b3b;        
+        transition: 0.3s;
+        padding: 16px 26px 16px;
+      }
+    }
+  }
+
+  &__bottom {
+    font-size: 16px;
+    background: #4c4c4c;
+    padding: 5px;
+    display: flex;
+    justify-content: end;
+
+    a {
+      margin: 10px;
+      padding: 5px 5px 6px;
+      text-decoration: none;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+      border-radius: 4px;
+      color: white;
+      border-radius: 4px;
+      background-color: #222;
+    }
+  }
+}

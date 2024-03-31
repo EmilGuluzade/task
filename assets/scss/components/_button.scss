@@ -1,0 +1,16 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+
+.btn{
+    display: inline-block;
+    color: #ffffff;
+    background: #e7ab3c;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #e7ab3c;
+   
+    padding: 13px 20px 12px;
+    cursor: pointer;
+}
